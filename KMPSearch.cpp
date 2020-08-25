@@ -1,27 +1,5 @@
-/*....
-     
- "Be not afraid of GROWING slowly, be afraid only of STANDING Still"
-                                                                     
-....*/
-#include<bits/stdc++.h>
-#define Abhi_921 ios_base::sync_with_stdio(false); cin.tie(NULL)
-#define ll long long
-#define ld long double
-#define fi(i,j,n) for(int i=j;i<n;i++)
-#define fd(i,j,n) for(int i=j;i>n;i--)
-#define print(a,n) for(int i=0;i<n;i++){cout<<a[i]<<' ';}cout<<endl;
-#define inp(a,n) for(int i=0;i<n;i++) cin>>a[i]
-#define printe(v) for(auto &i:v){cout<<i<<' ';}cout<<endl;
-#define deb(n1) cout<<n1<<endl;
-#define pb push_back
-#define eb emplace_back
-#define vi vector<ll>
-#define vll vector<pair<ll,ll>>
-#define umap unordered_map<ll,ll>
-using namespace std;
-const long long mod=1e9+7;
-
-void lpsarr(string phone,int n,int *lps){
+//KMP Search
+void lpsarr(string phone,int n,int *lps){   //Creation of lps array
     int len=0;
     lps[0]=0;
     int i=1;
@@ -42,7 +20,7 @@ void lpsarr(string phone,int n,int *lps){
 //print(lps,n);
 }
 
-set<int> kmpsearch(string ai,string phone){
+set<int> kmpsearch(string ai,string phone){    //Kmp Search function
   int m=ai.length();
   int n=phone.length();
   int lps[n];
@@ -61,22 +39,15 @@ set<int> kmpsearch(string ai,string phone){
     }
     else if(i<m && phone[j]!=ai[i]){
         //cout<<j<<endl;
-        if(j!=0) j=lps[j-1];
+        if(j!=0) j=lps[j-1];                   //Take Care according to question.
+                                               //Variable according to questio.
         else i=i+1; 
     }
     }
     //cout<<n<<endl;
 return st;
 }
-int main(){
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt","r",stdin);
-        freopen("output.txt","w",stdout);
-    #endif
-Abhi_921;
-int t;
-t=1;
-while(t--){
+int main(){                                     //Main function not required
 string ai,phone;
 cin>>ai>>phone;
 set<int> st;
