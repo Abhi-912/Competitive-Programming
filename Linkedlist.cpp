@@ -11,9 +11,8 @@ class Linked_list{
        tail=nullptr;
    }
    void push(int n);
-   int pop();
+   void pop();
    void print(Node *p);
-   void revrese(Node *p);
    Node* gethead(){
        return head;
    }
@@ -32,26 +31,32 @@ void Linked_list::push(int n){
     }
     //delete temp;
 }
-int Linked_list::pop(){
-    int k;
+void Linked_list::pop(){
     if(head==nullptr) cout<<"Linked List is empty";
     if(head->next==nullptr){
-        k=head->data;
         head=nullptr;
     }
     Node *p=head;
     while(p->next->next!=nullptr){
         p=p->next;
     }
-    k=tail->data;
     tail=p;
     p->next=nullptr;
-
-    return k;
 }
 void Linked_list::print(Node *p){
     while(p!=nullptr){
         cout<<p->data<<" ";
         p=p->next;
     }
+}
+int main(){
+Linked_list a;
+a.push(10);
+a.push(2);
+a.push(12);
+a.push(14);
+a.print(a.gethead());
+a.pop();
+a.print(a.gethead());
+return 0;
 }
