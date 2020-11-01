@@ -1,1 +1,1 @@
-A library for Competitive Programming.
+<A library for Competitive Programming.>
