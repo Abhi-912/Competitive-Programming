@@ -12,3 +12,5 @@ int factor(int n) {
    int k = *max_element(all(v));
    return k;
 }
+
+//Use according to your use
