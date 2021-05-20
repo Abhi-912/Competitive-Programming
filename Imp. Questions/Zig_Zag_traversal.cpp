@@ -51,5 +51,7 @@ public:
         return vv;
     }
 };
+// Create two stack and store root in one stack and then using while loop check in any of the stack is not empty. If not empty pop out the value and print it and according
+//traversal if root is in the first stack then push it's children to second stack accordingly(if traversal is done from left to right push first left value then right value.
 
 //Reference:- https://www.youtube.com/watch?v=iJT9JrrFQ44&list=PLNxqWc8Uj2LRbsOlBiPJZAyZpaUwdDepd&index=6
