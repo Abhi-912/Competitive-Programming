@@ -9,7 +9,6 @@ class mqueue{
     void push(int n);
     void pop();
     void display();
-    ~mqueue();
 };
 void mqueue::push(int n){
     Node *temp=new Node;
@@ -31,14 +30,7 @@ void mqueue::pop(){
         } 
     }
 }
-mqueue::~mqueue(){
-    while(front!=nullptr){
-        Node *temp=front;
-        front=front->next;
-        delete temp;
-    }
-    rear=nullptr;
-}
+
 void mqueue::display(){
     if(front==nullptr) {cout<<"EMPTY"<<endl;return;}
         Node *temp=front;
